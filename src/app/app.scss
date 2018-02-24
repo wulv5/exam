@@ -14,3 +14,20 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.platform-android {
+  ion-header {
+    padding-top: $cordova-md-statusbar-padding;
+    background-color: #26c7d4/*color($colors, primary)*/;
+  }
+}
+.toolbar-background-md{
+  background-color: #26c7d4;
+}
+.toolbar-title-md{
+  color: #fff;
+}
+.wulv-title-center{
+  .toolbar-title-md{
+    text-align: center;
+  }
+}

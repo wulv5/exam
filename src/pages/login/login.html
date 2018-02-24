@@ -1,0 +1,17 @@
+<ion-content>
+  <ion-icon #Back (click)="onClick()" name="wulvIcon-back"></ion-icon>
+  <div class="form">
+    <label>1
+      <input type="text" placeholder="用户名">
+    </label>
+    <label>2
+      <input type="password" placeholder="密码">
+    </label>
+    <label>
+      <input type="text" placeholder="密码" [hidden]="true">
+    </label>
+    <button ion-button>登录</button>
+    <span>注册</span>
+    <span>忘记密码</span>
+  </div>
+</ion-content>

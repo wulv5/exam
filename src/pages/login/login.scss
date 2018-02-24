@@ -1,0 +1,18 @@
+page-login{
+  .scroll-content{
+    background-image: url('../assets/imgs/login/loginbg.png');
+    background-size: 100%;
+  }
+  .ion-md-wulvIcon-back{
+    padding-top: $cordova-md-statusbar-padding;
+    padding-left: 10px;
+    font-size: 30px;
+  }
+  .form{
+    padding-top: 45%;
+    padding-left: 15%;
+    input{
+      display: block;
+    }
+  }
+}
