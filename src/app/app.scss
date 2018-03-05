@@ -14,12 +14,29 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+input::-webkit-input-placeholder{
+  color: #b6e4f2;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  color: #b6e4f2;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  color: #b6e4f2;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+  color: #b6e4f2;
+}
+li{
+  list-style-type: none;
+}
+
 .platform-android {
   ion-header {
     padding-top: $cordova-md-statusbar-padding;
     background-color: #26c7d4/*color($colors, primary)*/;
   }
 }
+// header
 .toolbar-background-md{
   background-color: #26c7d4;
 }
@@ -30,4 +47,22 @@
   .toolbar-title-md{
     text-align: center;
   }
+}
+
+// toast css
+.wulv-toast-def{
+  .toast-middle{
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    //margin-top: 50%;
+    text-align: center;
+    .toast-message{
+      padding: 10px;
+    }
+  }
+}
+// back button
+.ion-md-arrow-back{
+  color: #fff;
 }

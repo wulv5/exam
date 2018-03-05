@@ -8,8 +8,8 @@
 
 <ion-content>
   <ul padding>
-    <li *ngFor="let item of ksList">
-      <img [src]="'assets/imgs/home/' + item.src" [alt]="item.text">
+    <li (click)="PageButtonService.goPage('AskPage', {ask: item.text})" *ngFor="let item of conf.data.ksList.list">
+      <img [src]="conf.data.ksList.url + item.src" [alt]="item.text">
       <p>{{item.text}}</p>
     </li>
   </ul>

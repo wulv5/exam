@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Platform, ToastController, App, NavController, Tabs} from 'ionic-angular';
+import {page} from "../app/app.module";
 
 @Injectable()
-export class BackButtonService {
+export class PageButtonService {
 
   //控制硬件返回按钮是否触发，默认false
   backButtonPressed: boolean = false;
@@ -10,13 +11,15 @@ export class BackButtonService {
   //构造函数 依赖注入
   constructor(public platform: Platform,
               public appCtrl: App,
-              public toastCtrl: ToastController
-              ) {
+              public toastCtrl: ToastController) {
   }
+
   tabRef;
+  navCtrl;
   //注册方法
-  registerBackButtonAction(tabRef: Tabs,navCtrl): void {
+  registerBackButtonAction(tabRef: Tabs, navCtrl?): void {
     this.tabRef = tabRef;
+    this.navCtrl = navCtrl;
     //registerBackButtonAction是系统自带的方法
     this.platform.registerBackButtonAction(() => {
       //获取NavController
@@ -48,8 +51,8 @@ export class BackButtonService {
       this.toastCtrl.create({
         message: '再按一次退出应用',
         duration: 2000,
-        position: 'bottom',
-        // cssClass
+        position: 'middle',
+        cssClass: 'wulv-toast-def'
       }).present();
       //标记为true
       this.backButtonPressed = true;
@@ -60,5 +63,14 @@ export class BackButtonService {
 
   select(num: number): void {
     this.tabRef.select(num);
+  }
+
+  backRootPage(): void {
+    // this.appCtrl.getRootNav().pop();
+    this.navCtrl.pop();
+  }
+
+  goPage(p, params?: object): void {
+    this.navCtrl.push(page[p], params);
   }
 }

@@ -1,17 +1,21 @@
 <ion-header no-border>
   <ion-navbar>
     <ion-title class="wulv-title-center">
-      Contact
+      综合评分
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header class="wulv">Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-list-header>
+    <img float-left style="border-radius: 50%;" width="80" height="80" src="assets/imgs/icon.png">
+    <span float-left>无虑老师</span>
+  </ion-list-header>
+  <ul padding-right padding-left>
+    <li (click)="goPage()" padding *ngFor="let item of conf.data.ksList.list">
+      <img float-left [src]="conf.data.ksList.url + item.src" width="35" height="35" alt="">
+      <span float-left>{{item.text}}</span>
+      <div float-right>90  <span>分</span></div>
+    </li>
+  </ul>
 </ion-content>

@@ -1,3 +1,42 @@
 page-contact {
-
+  .scroll-content {
+    background: #f4f4f4;
+    .label {
+      span {
+        display: block;
+        margin-left: 3rem;
+        height: 80px;
+        line-height: 80px;
+        font-size: 25px;
+      }
+    }
+    ul {
+      li {
+        margin-top: 1rem;
+        border-radius: 10px;
+        background: #ffffff;
+        font-size: 18px;
+        color: #7a9399;
+        overflow: hidden;
+        padding-bottom: 10px!important;
+        //box-shadow: 0 10px 5px #888888;
+        img {
+          margin: {
+            top:-6px;
+            right: 5px;
+          }
+        }
+        span{
+          margin-top:2px;
+        }
+        div {
+          color: #fd8077;
+          margin-top: 2px;
+          span {
+            color: #c3d5d9;
+          }
+        }
+      }
+    }
+  }
 }

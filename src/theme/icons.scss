@@ -1,7 +1,22 @@
-.ion-md-wulvIcon-back:before{
+.ion-md-wulvIcon-back:before, .ion-ios-wulvIcon-back:before{
   content: '';
   background-image: url("../assets/icon/back.svg");
   background-size: 20px 20px;
   width: 20px;
   height: 20px;
+}
+.ion-md-wulvIcon-login:before, .ion-ios-wulvIcon-login:before{
+  content: '';
+  background-image: url("../assets/icon/login.svg");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+.ion-md-wulvIcon-password:before, .ion-ios-wulvIcon-password:before{
+  content: '';
+  background-image: url("../assets/icon/password.svg");
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  color: #aae1f2;
 }
