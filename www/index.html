@@ -13,24 +13,26 @@
   <meta name="theme-color" content="#4e8ef7">
 
   <!-- add to homescreen for ios -->
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <meta name="apple-mobile-web-app-title" content="潭州前端">
   <link rel="apple-touch-icon" href="assets/imgs/icon.png">
+  <meta name="msapplication-starturl" content="/">
   <meta name="msapplication-TileImage" content="assets/imgs/icon.png">
   <meta name="msapplication-TileColor" content="#2F3BA2">
 
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <!--<script src="cordova.js"></script>-->
 
-  <!-- un-comment this code to enable service worker-->
+  <!-- un-comment this code to enable service worker
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
         .then(() => console.log('service worker installed'))
         .catch(err => console.error('Error', err));
     }
-  </script>
+  </script>-->
 
   <link href="build/main.css" rel="stylesheet">
 
