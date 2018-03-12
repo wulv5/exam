@@ -33,7 +33,7 @@ self.toolbox.router.any('/!*', self.toolbox.fastest);
 self.toolbox.router.default = self.toolbox.networkFirst;*/
 
 
-const cacheName = 'wulv-tsst-v0.0.6';
+const cacheName = 'tz-web-exam-v0.0.1';
 const filesToCache = [
   './',
   './index.html',
