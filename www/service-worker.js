@@ -5,21 +5,33 @@
 
 
 'use strict';
-// importScripts('./build/sw-toolbox.js');
+/*importScripts('./build/sw-toolbox.js');
 
-// self.toolbox.options.cache = {
-//   name: 'automatic-import'
-// };
+self.toolbox.options.cache = {
+  name: 'automatic-import'
+};
+
+// pre-cache our key assets
+self.toolbox.precache(
+  [
+    './build/main.js',
+    './build/vendor.js',
+    './build/main.css',
+    './build/polyfills.js',
+    './index.html',
+    './manifest.json'
+  ]
+);
 
 // dynamically cache any other local assets
-// self.toolbox.router.any('/!*', self.toolbox.fastest);
+self.toolbox.router.any('/!*', self.toolbox.fastest);
 
 // for any other requests go to the network, cache,
 // and then only use that cached resource if your user goes offline
-// self.toolbox.router.default = self.toolbox.networkFirst;
+self.toolbox.router.default = self.toolbox.networkFirst;*/
 
 
-const cacheName = 'tz-web-exam-v0.0.2';
+const cacheName = 'wulv-tsst-v0.0.6';
 const filesToCache = [
   './',
   './index.html',
@@ -47,10 +59,10 @@ const filesToCache = [
 
 // 缓存资源
 self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] 安装');
+  console.log('[ServiceWorker] 开始缓存');
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
+      console.log('[ServiceWorker] 缓存中...');
       return cache.addAll(filesToCache);
     })
   );
@@ -58,12 +70,12 @@ self.addEventListener('install', function(e) {
 
 // 检查更新
 self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
+  console.log('[ServiceWorker] 检查到新版本');
   e.waitUntil(
     caches.keys().then(function(keyList) {
       return Promise.all(keyList.map(function(key) {
         if (key !== cacheName) {
-          console.log('[ServiceWorker] 更新', key);
+          console.log('[ServiceWorker] 移除旧资源', key);
           return caches.delete(key);
         }
       }));
@@ -71,7 +83,8 @@ self.addEventListener('activate', function(e) {
   );
   return self.clients.claim();
 });
-// 从缓存中加载
+
+// 从缓存内读取资源
 self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
