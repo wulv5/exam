@@ -86,7 +86,7 @@ self.addEventListener('activate', function(e) {
 
 // 从缓存内读取资源
 self.addEventListener('fetch', function(e) {
-  console.log('[ServiceWorker] Fetch', e.request.url);
+  console.log('[ServiceWorker] Fetch', e.request);
   e.respondWith(
     caches.match(e.request).then(function(response) {
       return response || fetch(e.request);
