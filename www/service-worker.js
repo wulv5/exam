@@ -3,12 +3,11 @@
  * more info on how to use sw-toolbox to custom configure your service worker.
  */
 
-
 'use strict';
 /*importScripts('./build/sw-toolbox.js');
 
 self.toolbox.options.cache = {
-  name: 'automatic-import'
+  name: 'auto-import'
 };
 
 // pre-cache our key assets
@@ -29,9 +28,7 @@ self.toolbox.router.any('/!*', self.toolbox.fastest);
 // for any other requests go to the network, cache,
 // and then only use that cached resource if your user goes offline
 self.toolbox.router.default = self.toolbox.networkFirst;*/
-
-
-const cacheName = 'tz-web-exam-v0.0.1';
+const cacheName = 'tz-web-exam-v0.0.2';
 const filesToCache = [
   './',
   './index.html',
@@ -56,40 +53,21 @@ const filesToCache = [
   './assets/icon/login.svg',
   './assets/icon/password.svg',
 ];
-
-// 缓存资源
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] 开始缓存');
+self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] 缓存中...');
-      return cache.addAll(filesToCache);
-    })
+    caches.open(cacheName).then((cache) => cache.addAll(filesToCache))
   );
 });
-
-// 检查更新
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] 检查到新版本');
+self.addEventListener('activate', e => {
   e.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (key !== cacheName) {
-          console.log('[ServiceWorker] 移除旧资源', key);
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then(keyList =>
+      Promise.all(keyList.map(key => key !== cacheName && caches.delete(key)))
+    )
   );
   return self.clients.claim();
 });
-
-// 从缓存内读取资源
-self.addEventListener('fetch', function(e) {
-  console.log('[ServiceWorker] Fetch', e.request.url);
+self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
+    caches.match(e.request).then(response => response || fetch(e.request))
   );
 });
