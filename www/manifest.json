@@ -2,7 +2,7 @@
   "name": "潭州前端考试",
   "short_name": "潭州前端考试",
   "start_url": "./",
-  "display": "standalone",
+  "display": "fullscreen",
   "icons": [
     {
       "src": "assets/imgs/icon.png",
