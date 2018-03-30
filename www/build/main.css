@@ -3761,27 +3761,26 @@ ion-icon::before {
 
 .ion-md-wulvIcon-back:before, .ion-ios-wulvIcon-back:before {
   content: '';
-  background-image: url("../assets/icon/back.svg");
-  background-size: 20px 20px;
   width: 20px;
   height: 20px;
+  background-image: url("../assets/icon/back.svg");
+  background-size: 20px 20px;
 }
 
 .ion-md-wulvIcon-login:before, .ion-ios-wulvIcon-login:before {
   content: '';
-  background-image: url("../assets/icon/login.svg");
-  background-size: 20px 20px;
   width: 20px;
   height: 20px;
+  background-image: url("../assets/icon/login.svg");
+  background-size: 20px 20px;
 }
 
 .ion-md-wulvIcon-password:before, .ion-ios-wulvIcon-password:before {
   content: '';
-  background-image: url("../assets/icon/password.svg");
-  background-size: 20px 20px;
   width: 20px;
   height: 20px;
-  color: #aae1f2;
+  background-image: url("../assets/icon/password.svg");
+  background-size: 20px 20px;
 }
 
 @font-face {
@@ -25758,6 +25757,10 @@ li {
   color: #fff;
 }
 
+page-ask ion-card-header {
+  white-space: normal;
+}
+
 page-contact .scroll-content {
   background: #f4f4f4;
 }
@@ -25780,12 +25783,12 @@ page-contact .scroll-content .label img {
 }
 
 page-contact .scroll-content ul li {
+  overflow: hidden;
   margin-top: 1rem;
   border-radius: 10px;
   background: #ffffff;
   font-size: 18px;
   color: #7a9399;
-  overflow: hidden;
   padding-bottom: 10px !important;
 }
 
@@ -25807,31 +25810,12 @@ page-contact .scroll-content ul li div span {
   color: #c3d5d9;
 }
 
-page-home {
-  /*.toolbar-background-md{
-    background-color: #26c7d4;
-  }*/
-}
-
-page-home ul {
-  /*li:nth-child(even){
-      float: right;
-    }*/
-  /*li:nth-child(even)::after{
-      clear: both;
-    }*/
-}
-
-page-home ul li {
-  float: left;
-  text-align: center;
+page-home ul li, page-home ul .item-md, page-home ul .item-ios, page-home .list-md li, page-home .list-md .item-md, page-home .list-md .item-ios, page-home .list-ios li, page-home .list-ios .item-md, page-home .list-ios .item-ios {
   width: 50%;
-  margin-bottom: 15px;
-}
-
-page-home ul li img {
-  width: 70px;
-  height: 70px;
+  /*img{
+        width: 70px;
+        height: 70px;
+      }*/
 }
 
 page-login .scroll-content {
@@ -25889,7 +25873,7 @@ page-login .form button {
 }
 
 page-login .form div {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   width: 70%;
   margin: 0 auto;
