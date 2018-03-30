@@ -1,24 +1,11 @@
 page-home {
-  /*.toolbar-background-md{
-    background-color: #26c7d4;
-  }*/
-  ul{
-    //padding: 0 30px;
-    li{
-      float: left;
-      text-align: center;
+  ul, .list-md, .list-ios{
+    li, .item-md, .item-ios{
       width: 50%;
-      margin-bottom: 15px;
-      img{
+      /*img{
         width: 70px;
         height: 70px;
-      }
-    }
-    li:nth-child(even){
-      float: right;
-    }
-    li:nth-child(even)::after{
-      clear: both;
+      }*/
     }
   }
 }

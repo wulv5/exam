@@ -2,25 +2,32 @@ page-contact {
   .scroll-content {
     background: #f4f4f4;
     .label {
-      span {
+      font-size: 25px;
+      img{
+        vertical-align: middle;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+      }
+      /*span {
         display: block;
         margin-left: 3rem;
         height: 80px;
         line-height: 80px;
-        font-size: 25px;
-      }
+      }*/
     }
     ul {
       li {
+        overflow: hidden;
         margin-top: 1rem;
         border-radius: 10px;
         background: #ffffff;
         font-size: 18px;
         color: #7a9399;
-        overflow: hidden;
-        padding-bottom: 10px!important;
-        //box-shadow: 0 10px 5px #888888;
+        padding-bottom: 10px !important;
+        //box-shadow: 0 5px 15px #888888;
         img {
+          //vertical-align: middle;
           margin: {
             top:-6px;
             right: 5px;

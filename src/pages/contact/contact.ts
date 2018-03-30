@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {App, NavController} from 'ionic-angular';
+// import {App, NavController} from 'ionic-angular';
 import {webConfig} from "../../services/webconfig.service";
 import {PageButtonService} from "../../services/pageButton.service";
 
@@ -11,7 +11,7 @@ export class ContactPage {
 
   constructor(
     // public navCtrl: NavController,
-    public appCtrl: App,
+    // public appCtrl: App,
     private conf: webConfig,
     private pageService: PageButtonService) {
   }

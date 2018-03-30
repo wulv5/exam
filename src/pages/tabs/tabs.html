@@ -1,13 +1,4 @@
 <ion-tabs [selectedIndex]="0" no-border #myTabs>
-  <ion-tab [root]="tab1Root" tabTitle="首页" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab1Root" tabsHideOnSubPages="true" tabBadge="" tabTitle="首页" tabIcon="home"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="我的" tabIcon="contacts"></ion-tab>
-  <!--
-  .tab-button[aria-selected=false] .ion-md-myIcon-outline:before {
-    content: url("../assets/fonts/people.svg");
-}
-
-.tab-button[aria-selected=true] .ion-md-myIcon-outline:before {
-    content: url("../assets/fonts/people-fill.svg");
-}
-  -->
 </ion-tabs>

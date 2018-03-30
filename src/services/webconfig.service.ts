@@ -4,7 +4,9 @@ import {Injectable} from "@angular/core";
 
 export class webConfig {
   user: object = {
-    login: false
+    login: false,
+    user: '',
+    pass: ''
   };
   data: object = {
     ksList: {
@@ -17,8 +19,9 @@ export class webConfig {
         {src: 'demo.png', text: '实战'},
         {src: 'kj.png', text: '框架'},
       ]
-    }
+    },
+    askList: {}
   };
-  updateUrl: string = 'http://localhost:8100/update.xml';
+  updateUrl: string = 'https://wulv5.github.io/exam/www/update.xml';
   constructor() {}
 }

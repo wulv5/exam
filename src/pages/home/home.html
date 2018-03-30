@@ -6,12 +6,36 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ul padding>
+<ion-content class="grid-basic-page">
+
+  <!--<ion-slides #slides
+               pager slidesPerView="1" autoplay="1000" loop="true"
+              spaceBetween="100" zoom="true"
+              (ionSlideAutoplayStop)="goToSlide()">
+    <ion-slide style="background-color: green">
+      <h2>Slide 1</h2>
+    </ion-slide>
+    <ion-slide style="background-color: blue">
+      <h2>Slide 2</h2>
+    </ion-slide>
+    <ion-slide style="background-color: red">
+      <h2>Slide 3</h2>
+    </ion-slide>
+  </ion-slides>-->
+
+  <ion-list no-lines padding>
+    <ion-item float-left text-center margin-bottom align
+              (click)="PageButtonService.goPage('AskPage', {ask: item.text})"
+              *ngFor="let item of conf.data.ksList.list">
+      <img [src]="conf.data.ksList.url + item.src" [alt]="item.text" width="70" height="70">
+      <p>{{item.text}}</p>
+    </ion-item>
+  </ion-list>
+  <!--<ul padding>
     <li (click)="PageButtonService.goPage('AskPage', {ask: item.text})" *ngFor="let item of conf.data.ksList.list">
       <img [src]="conf.data.ksList.url + item.src" [alt]="item.text">
       <p>{{item.text}}</p>
     </li>
   </ul>
-  <!--<button ion-button block  (click)="showAlert()"></button>-->
+  <button ion-button block  (click)="showAlert()"></button>-->
 </ion-content>

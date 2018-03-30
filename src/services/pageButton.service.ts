@@ -16,6 +16,7 @@ export class PageButtonService {
 
   tabRef;
   navCtrl;
+
   //注册方法
   registerBackButtonAction(tabRef: Tabs, navCtrl?): void {
     this.tabRef = tabRef;

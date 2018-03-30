@@ -1,18 +1,18 @@
 <ion-content>
-  <ion-icon (click)="PageButtonService.backRootPage()" name="wulvIcon-back"></ion-icon>
+  <ion-icon (click)="navCtrl.pop()" name="wulvIcon-back"></ion-icon>
   <div class="form">
     <!--<form (submit)="">-->
       <label>
         <ion-icon name="wulvIcon-login"></ion-icon>
-        <input type="text" placeholder="用户名">
+        <input type="text" placeholder="用户名" [(ngModel)]="user">
       </label>
       <label>
         <ion-icon name="wulvIcon-password"></ion-icon>
-        <input type="password" placeholder="密码">
+        <input type="password" placeholder="密码" [(ngModel)]="pass">
       </label>
       <label [hidden]="lr">
         <ion-icon name="wulvIcon-password"></ion-icon>
-        <input type="password" placeholder="确认密码">
+        <input type="password" placeholder="确认密码" [(ngModel)]="repass">
       </label>
       <button [hidden]="!lr" (click)="loginToast()">登录</button>
       <button [hidden]="lr" (click)="regToast()">注册</button>
