@@ -28,7 +28,7 @@ self.toolbox.router.any('/!*', self.toolbox.fastest);
 // for any other requests go to the network, cache,
 // and then only use that cached resource if your user goes offline
 self.toolbox.router.default = self.toolbox.networkFirst;*/
-const cacheName = 'tz-web-exam-v0.0.3';
+const cacheName = 'tz-web-exam-v0.0.2';
 const filesToCache = [
   './',
   './index.html',
