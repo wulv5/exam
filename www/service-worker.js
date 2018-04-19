@@ -53,6 +53,7 @@ const filesToCache = [
   './assets/icon/back.svg',
   './assets/icon/login.svg',
   './assets/icon/password.svg',
+  './assets/icon/qq.svg',
 ];
 self.addEventListener('install', e => {
   e.waitUntil(
