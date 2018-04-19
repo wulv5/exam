@@ -3783,6 +3783,14 @@ ion-icon::before {
   background-size: 20px 20px;
 }
 
+.ion-md-wulvIcon-qq:before, .ion-ios-wulvIcon-qq:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/icon/qq.svg");
+  background-size: 20px 20px;
+}
+
 /*@mixin opa($val){
   opacity: $val;
   filter:alpha(opacity=$val*100);
@@ -25733,8 +25741,8 @@ li {
 }
 
 .platform-android ion-header {
-  /*padding-top: $cordova-md-statusbar-padding;
-    background-color: #26c7d4 color($colors, primary)*/
+  padding-top: 20px;
+  background-color: #f8f8f8;
 }
 
 .toolbar-background-md {
@@ -25867,7 +25875,8 @@ page-login .form label input {
 page-login .form label .ion-md-wulvIcon-login,
 page-login .form label .ion-ios-wulvIcon-login,
 page-login .form label .ion-md-wulvIcon-password,
-page-login .form label .ion-ios-wulvIcon-password {
+page-login .form label .ion-ios-wulvIcon-password,
+page-login .form label .ion-ios-wulvIcon-qq {
   position: absolute;
   top: 15px;
   left: 13px;
