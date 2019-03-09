@@ -1,6 +1,6 @@
 {
-  "name": "潭州前端考试",
-  "short_name": "潭州前端考试",
+  "name": "goudan",
+  "short_name": "dachui",
   "start_url": "./",
   "display": "fullscreen",
   "icons": [
@@ -15,6 +15,6 @@
       "type": "image/png"
     }
   ],
-  "background_color": "#26c7d4",
-  "theme_color": "#26c7d4"
+  "background_color": "#996633",
+  "theme_color": "#996633"
 }
